@@ -1,1 +1,2 @@
-console.log('freind' + 'test' + 'test')
+console.log('freind' + 'test' + 'test');
+got
