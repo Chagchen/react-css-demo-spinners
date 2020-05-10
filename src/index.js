@@ -1,6 +1,1 @@
-console.log(
-
-  'test' +
-
-  'test'
-)
+console.log('freind' + 'test' + 'test')
