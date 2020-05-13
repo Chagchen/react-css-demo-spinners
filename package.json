@@ -4,20 +4,24 @@
   "description": "Small React library for CSS spinners",
   "main": "index.js",
   "scripts": {
+    "prebuild": "rimraf dist",
+    "build": "rollup -c",
     "test": "react-scripts test --env=jsdom",
     "start": "react-scripts start",
-    "build": "react-scripts build",
     "eject": "react-scripts eject",
     "lint": "prettier-eslint --write $PWD/'src/**/*.[jt]s?(x)' && eslint .",
     "lint:fix": "prettier-eslint --write $PWD/'src/**/*.[jt]s?(x)' && eslint --fix ."
   },
   "husky": {
-    "hooks":{
+    "hooks": {
       "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "src/**/*.[jt]s?(x)": ["npm run lint:fix", "git add"]
+    "src/**/*.[jt]s?(x)": [
+      "npm run lint:fix",
+      "git add"
+    ]
   },
   "repository": {
     "type": "git",
@@ -35,6 +39,9 @@
   },
   "homepage": "https://github.com/Chagchen/react-css-demo-spinners#readme",
   "devDependencies": {
+    "@babel/core": "^7.9.6",
+    "@babel/preset-env": "^7.9.6",
+    "@babel/preset-react": "^7.9.4",
     "eslint": "^7.0.0",
     "eslint-config-google": "^0.14.0",
     "eslint-config-standard": "^14.1.1",
@@ -46,7 +53,12 @@
     "husky": "^4.2.5",
     "lint-staged": "^10.2.2",
     "prettier-eslint": "^9.0.1",
-    "prettier-eslint-cli": "^5.0.0"
+    "prettier-eslint-cli": "^5.0.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.9.1",
+    "rollup-plugin-babel": "^4.4.0",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^5.3.0"
   },
   "dependencies": {}
 }
