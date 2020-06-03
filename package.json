@@ -2,7 +2,9 @@
   "name": "react-css-demo-spinners",
   "version": "1.0.0",
   "description": "Small React library for CSS spinners",
-  "main": "index.js",
+  "main": "dist/bundle.cjs.js",
+  "module": "dist/bundle.esm.js",
+  "sideEffects": false,
   "scripts": {
     "prebuild": "rimraf dist",
     "build": "rollup -c",
