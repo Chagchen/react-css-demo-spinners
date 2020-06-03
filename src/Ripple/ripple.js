@@ -12,5 +12,4 @@ const Ripple = props => (
     </div>
   </>
 )
-
 export default Ripple
