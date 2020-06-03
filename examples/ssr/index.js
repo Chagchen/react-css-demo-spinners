@@ -1,13 +1,13 @@
-const React = require('react')
+const { createElement } = require('react')
 const express = require('express')
-const ReactDOM = require('react-dom/server')
+const { renderToString } = require('react-dom/server')
 const { Ripple } = require('react-css-demo-spinners')
 
 const port = 3001
 const app = express()
 
 app.get('*', (req, res) => {
-  const html = ReactDOM.renderToString(React.createElement(Ripple))
+  const html = renderToString(createElement(Ripple))
 
   res.send(`
     <!DOCTYPE html>
